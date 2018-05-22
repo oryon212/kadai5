@@ -31,7 +31,7 @@ public class IntToEng {
     	if(n==11) ans="eleven";
     	if(n==12) ans="twelve";
     	if(n==13) ans="thriteen";
-    	if(n==14) ans="fouteen";
+    	if(n==14) ans="fourteen";
     	if(n==15) ans="fifteen";
     	if(n==16) ans="sixteen";
     	if(n==17) ans="seventeen";
@@ -43,7 +43,10 @@ public class IntToEng {
     	 int b=0;
     	 int c=0;
 
-    	 if(keta==3) b=n%100;//下二桁
+    	 if(keta==3) {
+    		 b=n%100; //下2桁
+    		 ans=translateEng(b);
+    	 }
 
 
     	 if(keta==2){
@@ -58,27 +61,12 @@ public class IntToEng {
     		 if(i==8){a="eighty ";}
     		 if(i==9){a="ninety ";}
     	 }
-
-
-    /*	if(m==1) ans="one";
-      	if(m==2) ans="two";
-      	if(m==3) ans="three";
-      	if(m==4) ans="four";
-      	if(m==5) ans="five";
-      	if(m==6) ans="six";
-      	if(m==7) ans="seven";
-      	if(m==8) ans="eight";
-      	if(m==9) ans="nine";
-      	*/
     	 }
     	 int m=n%10;
-    	 translateEng(m);
+    	 ans=translateEng(m);
     	 }
-
-
-
-
-    	return a+ans;
+    	 
+    	 return a+ans;
     }
 
 }

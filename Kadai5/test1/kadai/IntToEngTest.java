@@ -30,14 +30,6 @@ public class IntToEngTest {
 		String actual=ite.translateEng(45);
 		assertThat(actual,is(expected));
 	}
-	
-	@Test
-	public void 百三十五を英語にする() {
-		IntToEng ite = new IntToEng();
-		String expected="thirty five";
-		String actual=ite.translateEng(135);
-		assertThat(actual,is(expected));
-	}
 
 
 }
