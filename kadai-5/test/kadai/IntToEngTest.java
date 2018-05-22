@@ -34,8 +34,16 @@ public class IntToEngTest {
 	@Test
 	public void 百三十五を英語にする() {
 		IntToEng ite = new IntToEng();
-		String expected="thirty five";
+		String expected="one hundred thirty five";
 		String actual=ite.translateEng(135);
+		assertThat(actual,is(expected));
+	}
+	
+	@Test
+	public void 千二百四十五を英語にする() {
+		IntToEng ite = new IntToEng();
+		String expected="one thousand two hundred fourty five";
+		String actual=ite.translateEng(1245);
 		assertThat(actual,is(expected));
 	}
 
