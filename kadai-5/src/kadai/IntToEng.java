@@ -40,13 +40,21 @@
 	    	 int b=0;
 	    	 int c=0;
 	    	 
-	    	 if(keta==4){
-	    		c=n/1000;
-	    		 b=n%1000;//1245->245
+	    	 
+	    	 if(keta==5){//12345
+	    		 c=n/1000;//12
+	    		 b=n%1000;//345
 	    		 ans=translateEng(b);
 	    		 a=translateEng(c)+ " thousand ";
-	    		 
 	    	 }
+	    	 
+	    	 if(keta==4){
+		    		c=n/1000;
+		    		 b=n%1000;//1245->245
+		    		 ans=translateEng(b);
+		    		 a=translateEng(c)+ " thousand ";
+		    		 
+		    	 }
 	
 	    	 if(keta==3) {
 	    		 b=n%100; //下2桁
